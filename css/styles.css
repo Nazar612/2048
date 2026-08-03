@@ -1,0 +1,54 @@
+.game {
+    width: 600px;
+    height: 700px;
+
+    border-radius: 20px;
+    border-style: double;
+    border-width: 4px;
+    border-color: white;
+
+    background-color: rgb(123, 140, 192);
+
+    padding: 15px;
+
+    transform: translateY(20%);
+
+    text-align: center;
+}
+
+.buttonDiv {
+    margin-bottom: 30px;
+}
+
+.button {
+    padding: 2.5px 30px;
+    border-color: blueviolet;
+    background-color: rgba(78, 46, 107, 0.636);
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.game_tableau {
+    background-color: rgb(203, 225, 244);
+
+    width: 500px;
+    height: 560px;
+
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 15px;
+    justify-content: center;
+    align-content: center;
+
+    margin: 0 auto;
+}
+
+.box {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
