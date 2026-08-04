@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: ugabuga;
+    src: url("../assets/fonts/Ubuntu-Regular.ttf")
+    format(TrueType);
+    font-size: 18px;
+    font-weight:900;
+}
+
 oi, ul {
     list-style: none;
 }
@@ -18,4 +26,6 @@ body {
     background-image: url("https://wallpapercave.com/wp/wp5393108.jpg");
     background-repeat:no-repeat;
     background-size: cover;
+
+    font-family: ugabuga;
 }
