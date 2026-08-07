@@ -2,6 +2,7 @@ const elements = {
     boxes: document.querySelectorAll(".box"),
     
     start: document.querySelector("#start"),
+    clear: document.querySelector("#clear"),
 };
 
 let matrixCreate = new Array(4).fill().map(() => new Array(4).fill(""));
@@ -29,6 +30,17 @@ elements.start.addEventListener("click", (e)=> {
     }
     console.log(matrixCreate);
 
+})
+
+elements.clear.addEventListener("click", (e)=> {
+   
+for(let row = 0; row < 4; row++) {
+    for(let col = 0; col < 4; col++) {
+        matrixCreate[row][col] = ''
+    }
+};
+
+console.log(matrixCreate, "clear");
 })
 
 // console.log(matrixCreate);
