@@ -23,9 +23,10 @@ a {
 body {
     display: flex;
     justify-content: center;
-    background-image: url("https://wallpapercave.com/wp/wp5393108.jpg");
+    /* background-image: url("https://wallpapercave.com/wp/wp5393108.jpg");
     background-repeat:no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: darkgray;
 
     font-family: ugabuga;
 }

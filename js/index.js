@@ -1,22 +1,34 @@
 const elements = {
-    boxes: document.querySelectorAll(".box")
-}
-
-console.log(elements.boxes);
+    boxes: document.querySelectorAll(".box"),
+    
+    start: document.querySelector("#start"),
+};
 
 let matrixCreate = new Array(4).fill().map(() => new Array(4).fill(""));
-// console.log(matrixCreate);
-let i = 0;
-let boxesI = 0;
-for(let row = 0; row < 4; row++) {
-    for(let col = 0; col < 4; col++) {
-        i++
-        matrixCreate[row][col] = i;
+// let i = 0;
+// let boxesI = 0;
+// for(let row = 0; row < 4; row++) {
+//     for(let col = 0; col < 4; col++) {
+//     }
+// };
 
-        elements.boxes[boxesI].textContent = matrixCreate[row][col];
+const boxTwo = document.createElement("div");
+boxTwo.classList.add("two");
 
-        boxesI++
+elements.start.addEventListener("click", (e)=> {
+    let rowRandom = Math.floor(Math.random() * 4);
+    let colRandom = Math.floor(Math.random() * 4);
+
+    let row2Random = Math.floor(Math.random() * 4);
+    let col2Random = Math.floor(Math.random() * 4);
+
+
+    if(matrixCreate[rowRandom][colRandom] === '' && matrixCreate[row2Random][col2Random] === '') {
+        matrixCreate[rowRandom][colRandom] = boxTwo;
+        matrixCreate[row2Random][col2Random] = boxTwo;
     }
-}
+    console.log(matrixCreate);
 
-console.log(matrixCreate);
+})
+
+// console.log(matrixCreate);
