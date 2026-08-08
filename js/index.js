@@ -1,20 +1,23 @@
 const elements = {
     boxes: document.querySelectorAll(".box"),
-    
+    game_tableau: document.querySelector(".game_tableau"),
     start: document.querySelector("#start"),
     clear: document.querySelector("#clear"),
 };
 
-let matrixCreate = new Array(4).fill().map(() => new Array(4).fill(""));
-// let i = 0;
-// let boxesI = 0;
-// for(let row = 0; row < 4; row++) {
-//     for(let col = 0; col < 4; col++) {
-//     }
-// };
+let matrixCreate = new Array(4).fill().map(() => new Array(4).fill(0));
+
+for(let row = 0; row < 4; row++) {
+    for(let col = 0; col < 4; col++) {
+        if(boxTwo.textContent !== 0) {
+            
+        }
+    }
+};
 
 const boxTwo = document.createElement("div");
 boxTwo.classList.add("two");
+boxTwo.textContent = 2;
 
 elements.start.addEventListener("click", (e)=> {
     let rowRandom = Math.floor(Math.random() * 4);
