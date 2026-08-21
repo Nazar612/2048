@@ -4,57 +4,58 @@ const elements = {
     start: document.querySelector("#start"),
     clear: document.querySelector("#clear"),
 };
+let counter = 0
+let matrix = [
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0],
+];
 
-let matrixCreate = new Array(4).fill().map(() => new Array(4).fill(0));
-const boxesMassive = elements.boxes;
-let i = 0;
-console.log(boxesMassive);
-
-
-
-elements.start.addEventListener("click", (e)=> {
-    let rowRandom = Math.floor(Math.random() * 4);
-    let colRandom = Math.floor(Math.random() * 4);
-
-    let row2Random = Math.floor(Math.random() * 4);
-    let col2Random = Math.floor(Math.random() * 4);
-
-
-    if(matrixCreate[rowRandom][colRandom] === 0 && matrixCreate[row2Random][col2Random] === 0) {
-        matrixCreate[rowRandom][colRandom] = 2;
-        matrixCreate[row2Random][col2Random] = 2;
-        console.log(matrixCreate);
-
-        for(let row = 0; row < 4; row++) {
-    for(let col = 0; col < 4; col++) {
-        if(matrixCreate[row][col] !== 0) {
-            boxesMassive[i].innerHTML = `<div class="two">2</div>`
-            console.log(i);
-        }
-        i++;
-    }
-};
-    };
-
-//     for(let row = 0; row < 4; row++) {
-//     for(let col = 0; col < 4; col++) {
-//         if(boxTwo.textContent !== 0) {
+// for (let r = 0; r < 4; r++) {
+//         for(let c = 0; c <4; c++) {
             
 //         }
 //     }
-// };
 
-})
+function generateRandomCoord() {
+    let rowRand = Math.floor(Math.random() * 4);
+    let colRand = Math.floor(Math.random() * 4);
+    
+    matrix[rowRand][colRand] = 2;
+
+    
+};
+elements.start.addEventListener("click", (e)=> {
+    if(counter >= 1) {
+        location.reload()
+    }
+    generateRandomCoord();
+    generateRandomCoord();
+    counter += 1
+});
 
 elements.clear.addEventListener("click", (e)=> {
-   
-for(let row = 0; row < 4; row++) {
-    for(let col = 0; col < 4; col++) {
-        matrixCreate[row][col] = 0;
+    for (let r = 0; r < 4; r++) {
+        for(let c = 0; c <4; c++) {
+            matrix[r][c] = 0
+        }
+    };
+});
+
+document.addEventListener("keydown", (e)=> {
+    //Right
+    if(e.code === "KeyD") {
+        // let i = 3
+        for (let r = 0; r < 4; r++) {
+            // if(matrix[r][i] !== 0) {
+            //     i--
+            // }else{
+            //     matrix[r][i] = 1
+            //     console.log(matrix);
+            // }
+        for(let c = 0; c <4; c++) {
+        }
     }
-};
-
-console.log(matrixCreate, "clear");
+    }
 })
-
-// console.log(matrixCreate);
